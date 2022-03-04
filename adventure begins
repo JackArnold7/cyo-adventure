@@ -1,0 +1,182 @@
+//variables
+string_t name1, name2, roadmap;
+int introchoice, middlechoice1, middlechoice2, middlechoice3,random1,random2;
+random1 = randint(50,100);
+random2 = randint(10,20);
+
+//6 functions
+//This function is for the intro, which collects 2 names and offers 3 choices
+void intro(){
+    printf("You wake up on a cold, stony floor with darkness all around you.\n\
+    Looking around, you can see that you are in a cave, with the entrance in front of you and a large dark area behind you.\n\
+    A raging blizzard is blowing outside.\n You walk over to the mouth of the cave, and as freezing winds blow by your face, \n\
+    you can tell that this cave is on the side of a mountain, with a tiny straggling trail leading down the sheer face.\n\
+    You also see a wooden sign with a word carved into it.\n It kind of looks like a name… er- what does it say?\n");
+    scanf("%s", & name1);
+    printf("Turning back around for the first time you see a backpack, containing in it a torch,\n\
+    a matchbox, a bag of beef jerky, and a parka with a name sewn into the fabric.\n What is your name?\n");
+    scanf("%s", &name2);
+    printf("OPTION 1- take one of the matches and light the torch\n\
+    OPTION 2- walk around aimlessly\n\
+    OPTION 3- venture down the trail into the storm\n");
+    printf("Type 1, 2, or 3 to choose.\n");
+    scanf("%i", & introchoice);
+    while(introchoice !=1 && introchoice !=2 && introchoice !=3){
+        printf("That is not a choice. Please choose '1', '2', or '3'\n");
+        scanf("%i", & introchoice); 
+    }
+}
+//This function is for the middle you take from the first choice in the intro. It offers 3 choices which lead to end1, end2, and end3.
+void middle1(){
+    printf("You chose option 1.\n");
+    printf("You light the torch and flickering, yellowish light fills the cave. \n\
+    The darkness in the back of the cave fades away to reveal a large, hulking mass of white fur.\n \
+    Suddenly, you realize that it is none other than the abominable snowman. \n\
+    In shock, you stumble back a few steps, the noise waking the beast which opens its eyes and rises to look at you. \n\
+    It doesn’t look very happy to be disturbed from its slumber,\n and running away is no good because it looks like it could run a lot faster than you.\n\
+    Bleakly, you notice a metal tag hanging from a spiked collar around its neck that says: ",name1,".\n");
+    printf("OPTION 1- throw the beef jerky at it, hoping it will eat that, and not you \n\
+    OPTION 2- stand very still and hope it thinks you’re a rock \n\
+    OPTION 3- walk up to it saying: ",name1,"! My name is ",name2,"! and scratch its chin\n");
+    printf("make your middle choice: 1, 2, or 3\n");
+    scanf("%i", & middlechoice1);
+    while(middlechoice1 !=1 && middlechoice1 !=2 && middlechoice1 !=3){
+        printf("That is not a choice. Please choose '1', '2', or '3'\n");
+        scanf("%i", & middlechoice1);
+    }
+}
+//This function is for the middle you get if you choose option 2 in the intro. It offers 3 choices which lead to end4, end5, and end6.
+void middle2(){
+    printf("You chose option 2.\n");
+    printf(" You start to wander around the cave, and as you do, you notice a flat, smooth looking rock.\n\
+    Having seen many flat smooth rocks you think nothing of it and walk right over it, but this is a mistake.\n \
+    It was not a rock but a trapdoor, and the moment you go onto it it opens and you drop down and start sliding down some weird underground slide.\n \
+    After a minute of sliding you are dumped onto the ground in a large chamber containing ",random1," goblins. \n\
+    Most of them are small and pretty harmless-looking but a large one with a crown on its head walks over to you.\n \
+    'I am the goblin king! Now you will be my goblin lunch! Wahaha!'\n");
+    printf("OPTION 4- Punch the goblin king in the face and try to take his crown \nOPTION 5- turn around and try to climb back up the slide \nOPTION 6-yell '",name1,"!' and hope something happens\n");
+    printf("make your middle choice: 4, 5, or 6\n");
+    scanf("%i", & middlechoice2);
+    while(middlechoice2 !=4 && middlechoice2 !=5 && middlechoice2 !=6){
+        printf("That is not a choice. Please choose '4', '5', or '6'\n");
+        scanf("%i", & middlechoice2);
+    }
+}
+//This function is for the middle you get if you choose option 3 in the intro. It offers 3 choices which lead to end7, end8, and end9.
+void middle3(){
+    printf("You chose option 3.");
+    printf("You walk into the storm and immediately start getting blown around by the freezing wind.\n\
+    Struggling down the trail, you finally trip and get blown off the mountain and into the snow.\n\
+    You wake up, feeling you have been unconscious for a while and surrounded by unfamiliar scenery.\n\
+    With a start, you see that you are tied to a large spit, slowly rotating over a large bonfire; a crowd of ",random2," people is around you, chanting in some unknown language.\n\
+    You quickly snap the weak bonds and jump off, taking the stick you were on and lighting the end on fire like a torch.\n");
+    printf(" OPTION 7-smack the nearest villager with the torch \nOPTION 8- take your torch and run for the hills \nOPTION 9- diplomatically say 'Greetings, my name is ",name2,".\n I see you have tried to cook me, but I forgive you.\n'");
+    printf("make your middle choice: 7, 8, or 9\n");
+    scanf("%i", & middlechoice3);
+    while(middlechoice3 !=7 && middlechoice3 !=8 && middlechoice3 !=9){
+        printf("That is not a choice. Please choose '7', '8', or '9'\n");
+        scanf("%i", & middlechoice3);
+    }
+}
+//This prints end1, which results from choice 1 of middle1
+void end1(){
+    printf("You lightly toss the bag of beef jerky to the monster.\n It looks down at it and sniffs it lightly.\n After a moment of sniffing, its eyebrows furrow in rage as it picks up the bag, turns it upside down, and reveals that it is completely empty.\n As if on cue, your belly rumbles and you remember that you ate the entire thing a few hours ago.\n ‘Heh heh.\n Whoops.\n’ The abominable snowman devours you.\n THE END");
+    exit (1);
+}
+//This prints end2, which results from choice 2 of middle1
+void end2(){
+    printf("You stand stock-still, doing your best impression of a boulder.\n The torch feels very hot in your hand but you fight through the pain.\n The yeti, clearly expecting you to run away, seems confused for a moment.\n This passes though and it gets ready to have you for lunch.\n 'Grrrrrrrrrrrr' CRACK! A massive icicle falls on its head, crushing it.\n It seems while you were standing there like an imbecile, the heat from the torch rose to the ceiling and melted the ice enough to dislodge the chunk of ice and have it fall onto ",name1,"’s head.\n Calculated.\n THE END");
+    exit (1);
+}
+//This prints end3, which results from choice 3 of middle1
+void end3(){
+    printf("You casually stroll up to ",name1," and start scratching its chin like it’s no big deal.\n It flops over like a dog, begging you to pet its belly.\n 'Aww,' you say, 'Who’s a good snowman?' For a moment you think that maybe you could be friends, ",name2," and ",name1,".\n You finally stop scratching it and the moment you do, the magic is gone.\n It looks at you hungrily and promptly eats you.\n THE END");
+    exit (1);
+}
+//This prints end4, which results from choice 1 of middle2
+void end4(){
+    printf("You punch the king in the face, and while he is stunned snag the crown from off his head and put it on.\n A gasp goes through the crowd of goblins.\n A high pitched one in the back yells 'All hail the goblin king!' …… Suddenly the whole crowd bows to you, including the original goblin king.\n A path forms through the horde and 4 goblins wearing little hats and carrying one of those chair things that royalty sits on run over to you.\n You get on and live happily ever after as the king of an underground race of goblins.\n THE END");
+    exit (1);
+}
+//This prints end5, which results from choice 2 of middle2
+void end5(){
+    printf("You turn around and start desperately climbing up the slide you came down on.\n\
+    The goblin king tries to pursue you but it seems his massive belly prevents him from getting up.\n\
+    You make it all the way to the top! All you need to do is open the trapdoor.\n\
+    When you do, you see staring down at you a giant, drooling, abominable snowman with a collar that says '",name1,"' on it.\n\
+    Startled, you start sliding all the way back down and into the waiting gullet of the goblin king.\n THE END");
+    exit (1);
+}
+//This prints end6, which results from choice 3 of middle2
+void end6(){
+    printf("You scream '",name1,"!' The cry echoes around the room.\n The goblin king looks confused for a moment.\n 'What is that? Is that like some sort of war cry? Is that your name?' Sheepishly, you say, 'My name is ",name2," actually.\n' 'Well ",name2,",' he says, 'you will be very–' A giant abominable snowman shoots down the slide and gulps him up in a single bite.\n It burps and a crown skitters onto the floor.\n Relieved, you start shouting and jumping in celebration, but it was too soon; the yeti turns around and devours you too.\n THE END");
+    exit (1);
+}
+//This prints end7, which results from choice 1 of middle3
+void end7(){
+    printf("You club the villager on the head with the torch, and he instantly crumples to the ground, unconscious.\n The other villagers all look down at him and back at you in unison.\n You feel a sharp blow to the back of your head and get knocked out.\n You wake up in a large pit with a wooden cage over the top, and hear a faint chanting that sounds like English 'two may enter, one may leave…TWO MAY ENTER! ONE MAY LEAVE!' You turn around and realize that standing next to you is a drooling abominable snowman with a collar that says ",name1,".\n Only one of you leaves the pit, and it isn’t you.\n THE END");
+    exit (1);
+}
+//This prints end8, which results from choice 2 of middle3
+void end8(){
+    printf("Grabbing your torch, you start sprinting away from the village and into a thick pine forest that surrounds the place.\n After 5 minutes of running or so, you find yourself coming upon a different village.\n A kind looking woman comes over to you and says 'Come in, come in! You want some soup?' Over a hot meal, you explain that a tribe of cannibals tried to barbecue you.\n The villagers clearly know about these cannibals because they nod their heads, and eventually decide to wage war on the rival village.\n The war was long and arduous, but after a month or so of fighting, you find you have risen through the ranks and become a decorated war general who helped your tribe win.\n Your military skill helps the tribe take over all the nearby land and become a tyrannical empire, bent on controlling the entire world.\n You live out the rest of your days as a bloodthirsty warlord.\n THE END");
+    exit (1);
+}
+//This prints end9, which results from choice 3 of middle3
+void end9(){
+    printf("You walk up to the drooling crowd of cannibals and calmly discuss diplomacy with them.\n Well, it is more of a monologue about not eating your fellow man but they seem to get the gist.\n When you are done with your speech, they all pause, and then one holding a platter with some meat on it comes over to you.\n You quickly realize that either you have to eat the meat or become the meat, so you take a big bite.\n IT'S REALLY GOOD! Suddenly you understand why these people became cannibals in the first place! Unfortunately, your change of heart is not enough to save you from getting devoured by the cannibals.\n THE END");
+    exit (1);
+}
+//This offers the user a choice to see where all the choices will lead them.
+void roadmap1(){
+    printf("Would you like to see all possible outcomes?\n Type 'y' for yes, or 'n' to keep it a surprise.");
+    scanf("%s", &roadmap);
+    while(roadmap != "y" && roadmap !="n"){
+        printf("Acceptable answers: 'y', 'n'");
+        scanf("%s", &roadmap);
+    }
+    if(roadmap == "y"){
+        printf("Option 1 will take you to a yeti. End1:the yeti devours you after there is no beef jerky. End2: the yeti is crushed by an icicle. End3: the yeti devours you after you stop petting it. Option 2 will take you to a cave of goblins. End4: you become the goblin king. End5: you try to climb up the slide, but fall back down. End6:the yeti devours both you and the goblin king. Option 3 will take you to a village of cannibals. End7: you lose in a cage match to the yeti End8: you become the emperor of the region End9:you become a cannibal then die.");
+    }
+}
+int main(){
+    roadmap1();
+    intro();
+    if(1==introchoice){
+        middle1();
+        if(middlechoice1 == 1){
+            end1();
+        }
+        if(middlechoice1 == 2){
+            end2();
+        }
+        if(middlechoice1 == 3){
+            end3();
+        }
+    }
+    if(2==introchoice){
+        middle2();
+        if(middlechoice2 == 4){
+            end4();
+        }
+        if(middlechoice2 == 5){
+            end5();
+        }
+        if(middlechoice2 == 6){
+            end6();
+        }
+    }
+    if(3==introchoice){
+        middle3();
+        if(middlechoice3 == 7){
+            end7();
+        }
+        if(middlechoice3 == 8){
+            end8();
+        }
+        if(middlechoice3 == 9){
+            end9();
+        }
+    }
+    return 0;
+}
