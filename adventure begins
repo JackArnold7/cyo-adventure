@@ -1,8 +1,10 @@
 //variables
 string_t name1, name2, roadmap;
-int introchoice, middlechoice1, middlechoice2, middlechoice3,random1,random2;
+int introchoice, middlechoice1, middlechoice2, middlechoice3,random1,random2,random3,random4;
 random1 = randint(50,100);
 random2 = randint(10,20);
+random3 = randint(10,20);
+random4 = randint(7,15);
 
 //6 functions
 //This function is for the intro, which collects 2 names and offers 3 choices
@@ -14,7 +16,7 @@ void intro(){
     You also see a wooden sign with a word carved into it.\n It kind of looks like a name… er- what does it say?\n");
     scanf("%s", & name1);
     printf("Turning back around for the first time you see a backpack, containing in it a torch,\n\
-    a matchbox, a bag of beef jerky, and a parka with a name sewn into the fabric.\n What is your name?\n");
+    a matchbox with ",random3," matches, a bag of beef jerky, and a parka with a name sewn into the fabric.\n What is your name?\n");
     scanf("%s", &name2);
     printf("OPTION 1- take one of the matches and light the torch\n\
     OPTION 2- walk around aimlessly\n\
@@ -31,7 +33,7 @@ void middle1(){
     printf("You chose option 1.\n");
     printf("You light the torch and flickering, yellowish light fills the cave. \n\
     The darkness in the back of the cave fades away to reveal a large, hulking mass of white fur.\n \
-    Suddenly, you realize that it is none other than the abominable snowman. \n\
+    Suddenly, you realize that it is none other than a ",random4," foot tall abominable snowman. \n\
     In shock, you stumble back a few steps, the noise waking the beast which opens its eyes and rises to look at you. \n\
     It doesn’t look very happy to be disturbed from its slumber,\n and running away is no good because it looks like it could run a lot faster than you.\n\
     Bleakly, you notice a metal tag hanging from a spiked collar around its neck that says: ",name1,".\n");
